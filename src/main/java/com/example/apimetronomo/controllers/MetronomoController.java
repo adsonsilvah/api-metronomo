@@ -18,18 +18,18 @@ public class MetronomoController {
 	
 	private final MetronomoService metronomoService;
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Metronomo> findById(@PathVariable("id") Long id) {
         Metronomo entity = metronomoService.findById(id);
         return ResponseEntity.ok(entity);
     }
     
-    /*
-    @GetMapping("/{bpm}")
+    
+    @GetMapping("/bpm/{bpm}")
     public ResponseEntity<Metronomo> findByBpm(@PathVariable("bpm") Long bpm) {
         Metronomo entity = metronomoService.findByBpm(bpm);
         return ResponseEntity.ok(entity);
     }
-    */
+    
     
 }

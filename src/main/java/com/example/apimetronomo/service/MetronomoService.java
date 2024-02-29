@@ -24,9 +24,9 @@ public class MetronomoService {
 		return metronomoRepository.findById(id).get();
 	}
 	
-	/*
+	
 	public Metronomo findByBpm(Long bpm) {
-		return metronomoRepository.findBy
+		return metronomoRepository.findByBpm(bpm).get();
 	}
-	*/
+	
 }
