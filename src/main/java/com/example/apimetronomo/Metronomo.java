@@ -14,7 +14,7 @@ public class Metronomo {
 	@Column(name = "bpm")
 	private Long bpm;
 	
-	@Column(name = "URL")
+	@Column(name = "url")
 	private String URL;
 	
 }
