@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class MetronomoService {
 
 	
-	public final MetronomoRepository metronomoRepository;
+	public final MetronomoRepository metronomoRepository = null;
 	
 	public List<Metronomo> findAll() {
 		return metronomoRepository.findAll();

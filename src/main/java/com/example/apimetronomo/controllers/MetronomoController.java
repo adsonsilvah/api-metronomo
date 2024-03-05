@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MetronomoController {
 	
-	private final MetronomoService metronomoService;
+	private final MetronomoService metronomoService = new MetronomoService();
 
     @GetMapping("/id/{id}")
     public ResponseEntity<Metronomo> findById(@PathVariable("id") Long id) {
