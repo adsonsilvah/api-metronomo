@@ -13,6 +13,10 @@ FROM openjdk:17-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=build /home/adsonhenrique/Adson/ProjetosJava/api-metronomo/target/api-metronomo-0.0.1-SNAPSHOT.jar app.jar
+RUN mkdir -p /home/user/.local/share/buildkit/runc-overlayfs/cachemounts/buildkit945241751/bin
+COPY ./target/api-metronomo-0.0.1-SNAPSHOT.jar /home/user/.local/share/buildkit/runc-overlayfs/cachemounts/buildkit945241751/bin/
+
+
+#COPY --from=build /home/adsonhenrique/Adson/ProjetosJava/api-metronomo/target/api-metronomo-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
